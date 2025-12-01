@@ -1,17 +1,12 @@
 #include<stdio.h>
-
 #include<stdlib.h>
-
 #define MAX 3
-
 int s[MAX];
 int top = -1;
-
 void push(int item);
 int pop();
 void palindrome();
 void display();
-
 void main()
 {
     int choice, item;
@@ -51,7 +46,6 @@ void main()
         }
     }
 }
-
 void push(int item)
 {
     if (top == MAX - 1)
@@ -59,11 +53,9 @@ void push(int item)
         printf("\n-----------Stack overflow-----------");
         return;
     }
-
     top = top + 1;
     s[top] = item;
 }
-
 int pop()
 {
     int item;
@@ -76,7 +68,6 @@ int pop()
     top = top - 1;
     return item;
 }
-
 void display()
 {
     int i;
@@ -89,18 +80,15 @@ void display()
     for (i = top; i >= 0; i--)
         printf("| %d |\n", s[i]);
 }
-
 void palindrome()
 {
     int flag = 1, i;
     printf("\nStack content are:\n");
     for (i = top; i >= 0; i--)
         printf("| %d |\n", s[i]);
-
     printf("\nReverse of stack content are:\n");
     for (i = 0; i <= top; i++)
         printf("| %d |\n", s[i]);
-
     for (i = 0; i <= top / 2; i++)
     {
         if (s[i] != s[top - i])
