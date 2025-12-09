@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <math.h>   // <-- ADD THIS
+#include <math.h>   
 
 void tower(int n, char source, char temp, char destination)
 {
